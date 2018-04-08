@@ -1,18 +1,18 @@
 var n = 50, m = 50;
 var side = 15;
 var matrix = [];
-for(var y=0; y<m; ++y) {
+for (var y = 0; y < m; ++y) {
   matrix.push([]);
-  for(var x=0; x<n; x += 1) {
-    matrix[y].push(Math.round(Math.random()*4.6))
+  for (var x = 0; x < n; x += 1) {
+    matrix[y].push(Math.round(Math.random() * 4.6))
   }
 }
 
 var grassArr = [];
-var xotakerArr=[];
-var gishatichArr=[];
-var ararichArr=[];
-var vorsordArr=[];
+var xotakerArr = [];
+var gishatichArr = [];
+var ararichArr = [];
+var vorsordArr = [];
 
 function setup() {
   frameRate(1);
@@ -22,8 +22,8 @@ function setup() {
   for (var y = 0; y < matrix.length; y++) {
     for (var x = 0; x < matrix[y].length; x++) {
       if (matrix[y][x] == 1) {
-          var xot = new Grass(x, y);
-          grassArr.push(xot);
+        var xot = new Grass(x, y);
+        grassArr.push(xot);
       }
       else if (matrix[y][x] == 2) {
         var xotaker = new Xotaker(x, y);
@@ -33,9 +33,9 @@ function setup() {
         var gishatich = new Gishatich(x, y);
         gishatichArr.push(gishatich);
       }
-      else if(matrix[y][x] == 4) {
-        var vorsord = new Vorsord(x,y)
-          vorsordArr.push(vorsord);
+      else if (matrix[y][x] == 4) {
+        var vorsord = new Vorsord(x, y)
+        vorsordArr.push(vorsord);
       }
       else if (matrix[y][x] == 5) {
         var ararich = new Ararich(x, y);
@@ -64,7 +64,7 @@ function draw() {
         fill("brown");
         rect(x * side, y * side, side, side);
       }
-      else if(matrix[y][x]==4) {
+      else if (matrix[y][x] == 4) {
         fill('#DFAB70');
         rect(x * side, y * side, side, side);
       }
