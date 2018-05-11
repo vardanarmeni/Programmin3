@@ -7,8 +7,8 @@ class Vorsord extends Parent{
         this.directions = [];
     }
 
-   
-    
+
+
 
     mahanal() {
         matrix[this.y][this.x] = 0;

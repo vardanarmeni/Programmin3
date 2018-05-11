@@ -33,14 +33,14 @@ class Ararich extends Parent {
         var norX = norVandak[0];
         var norY = norVandak[1];
         if (matrix[norY][norX] == 0) {
-            matrix[norX][norY] = 2;
+            matrix[norX][norY] = 2 + Math.round(Math.random()) / 2;
             var xotaker = new Xotaker(norX, norY);
             xotakerArr.push(xotaker);
         }
         else if (matrix[norY][norX] == 1) {
             var xotaker = new Xotaker(norX, norY);
             xotakerArr.push(xotaker);
-            matrix[norX][norY] = 2;
+            matrix[norX][norY] = 2 + Math.round(Math.random()) / 2;
             for (var i in grassArr) {
                 if (grassArr[i].x == norX && grassArr[i].y == norY) {
                     grassArr.splice(i, 1);
